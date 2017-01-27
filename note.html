@@ -8,6 +8,11 @@
     <script src="js/noteController.js"></script>
 </head>
 <body data-ng-controller="NoteController as noteCtrl">
-
+    <h3>Note :</h3>
+    <textarea ng-model="noteCtrl.messageNote" maxlength="100"></textarea><br/>
+    <input type="button" value="Enregistrer" ng-click="noteCtrl.save()">
+    <input type="button" value="Effacer" ng-click="noteCtrl.clear()">
+    <p>Nombre de caractères restants : {{noteCtrl.count()}}</p>
+    {{noteCtrl.status}}
 </body>
 </html>
