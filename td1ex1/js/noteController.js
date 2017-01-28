@@ -1,7 +1,7 @@
 /**
  * Created by Utilisateur on 27/01/2017.
  */
-angular.module("NoteApp").controller("NoteController", function(){
+app.controller("NoteController", function(){
     this.messageNote = "";
     this.info = "";
     this.status = 1;
@@ -13,16 +13,20 @@ angular.module("NoteApp").controller("NoteController", function(){
 
     this.clear = function(){
         this.messageNote = "";
+        this.info = "";
+        this.status = 1;
     };
 
     this.count = function(){
         var cpt = 100 - this.messageNote.length;
+        if(cpt < 100)
+            this.info = "Note modifiée";
         if(cpt < 20)
             this.status = 3;
         else if(cpt < 50)
             this.status = 2;
-        else
-            this.status = 1;
+        /*else
+            this.status = 1;*/
         return cpt;
     };
 });
