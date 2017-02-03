@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Note</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-cookies.min.js"></script>
     <script src="js/noteApp.js"></script>
     <script src="js/noteController.js"></script>
 </head>
@@ -12,7 +13,8 @@
     <textarea ng-model="noteCtrl.messageNote" maxlength="100"></textarea><br/>
     <input type="button" value="Enregistrer" ng-click="noteCtrl.save()">
     <input type="button" value="Effacer" ng-click="noteCtrl.clear()">
-    <p>Nombre de caractères restants : {{noteCtrl.count()}}</p>
+    <p>Nombre de caractères restants : <span data-ng-bind="noteCtrl.count()" class="ng-binding"></span></p>
     {{noteCtrl.info}}
+    {{noteCtrl.cookies.get("note")}}
 </body>
 </html>

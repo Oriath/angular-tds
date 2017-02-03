@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="ServicesApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Services</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+        <script src="js/servicesApp.js"></script>
+        <script src="js/servicesController.js"></script>
+    </head>
+    <body data-ng-controller="ServicesController as srvCtrl">
+        <h1>Services</h1>
+        <p>Choisissez les éléments à inclure</p>
+        <ng-pluralize count="srvCtrl.nbActive"
+                      when="{'0': 'Aucun service sélectionné',
+                       'one': '1 service sélectionné',
+                       'other': '{} services sélectionnés'}">
+        </ng-pluralize><br><br>
+        <li ng-repeat="service in srvCtrl.services" ng-click="srvCtrl.toggleActive(service)">
+            {{service.name}}
+        </li><br>
+        Total : $<span data-ng-bind="srvCtrl.total()" class="ng-binding"></span>
+    </body>
+</html>

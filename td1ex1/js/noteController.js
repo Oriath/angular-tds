@@ -1,7 +1,7 @@
 /**
  * Created by Utilisateur on 27/01/2017.
  */
-app.controller("NoteController", function(){
+app.controller("NoteController", ["$cookies", function(cookies){
     this.messageNote = "";
     this.info = "";
     this.status = 1;
@@ -9,6 +9,7 @@ app.controller("NoteController", function(){
     this.save = function(){
         this.status = 0;
         this.info = "Note sauvegardée";
+        cookies.put("note", this.messageNote);
     };
 
     this.clear = function(){
@@ -29,4 +30,4 @@ app.controller("NoteController", function(){
             this.status = 1;*/
         return cpt;
     };
-});
+}]);
