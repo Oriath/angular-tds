@@ -2,9 +2,18 @@
  * Created by Utilisateur on 03/02/2017.
  */
 
-app.controller("ServicesController",function(){
+app.controller("ServicesController", ["$http", function(http){
 
     this.nbActive = 1;
+    this.codePromo= "";
+    this.activePromo= false;
+    this.promos;
+
+    http.get("./promo.json").then(function(response) {
+        this.promos = response.data;
+
+    }, function() {
+    });
 
     this.services = [
                         {
@@ -43,4 +52,19 @@ app.controller("ServicesController",function(){
         else
             this.nbActive--;
     };
-});
+
+    this.remise = function(){
+        console.log("Promos : "+JSON.stringify(this.promos));
+        if(this.promos[this.codePromo])
+            return this.total()*this.promos[this.codePromo];
+        else
+            return "Code indisponible";
+    }
+
+    /*this.totalRemise = function(codePromo){
+        if(this.promos[codePromo])
+            return this.total()*this.promos[codePromo];
+        else
+            return "Code indisponible";
+    }*/
+}]);

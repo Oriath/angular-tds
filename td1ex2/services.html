@@ -16,8 +16,11 @@
                        'other': '{} services sélectionnés'}">
         </ng-pluralize><br><br>
         <li ng-repeat="service in srvCtrl.services" ng-click="srvCtrl.toggleActive(service)">
-            {{service.name}}
+            {{service.name}} {{service.price | currency}} {{service.active}}
         </li><br>
-        Total : $<span data-ng-bind="srvCtrl.total()" class="ng-binding"></span>
+        Total : <span data-ng-bind="srvCtrl.total() | currency" class="ng-binding"></span><br>
+        <input type="checkbox" ng-model="srvCtrl.activePromo"><input type="text" ng-model="srvCtrl.codePromo" placeholder="Code promo"><br>
+        <div ng-show="srvCtrl.activePromo && srvCtrl.codePromo">Remise : <span data-ng-bind="srvCtrl.remise()" class="ng-binding"></span><br>
+        Total avec remise : <span data-ng-bind="srvCtrl.total()-srvCtrl.total()*0.2 | currency" class="ng-binding"></span><br></div>
     </body>
 </html>
