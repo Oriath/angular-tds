@@ -4,14 +4,14 @@
 
 app.controller("ServicesController", ["$http", function(http){
 
+    this.reduc = 0;
     this.nbActive = 1;
-    this.codePromo= "";
-    this.activePromo= false;
-    this.promos;
+    this.codePromo = "";
+    this.activePromo = false;
+    this.promos = "";
 
     http.get("./promo.json").then(function(response) {
-        this.promos = response.data;
-
+        self.promos = response.data;
     }, function() {
     });
 
@@ -54,17 +54,20 @@ app.controller("ServicesController", ["$http", function(http){
     };
 
     this.remise = function(){
-        console.log("Promos : "+JSON.stringify(this.promos));
-        if(this.promos[this.codePromo])
-            return this.total()*this.promos[this.codePromo];
-        else
+        if(this.codePromo.length>0 && self.promos[this.codePromo]) {
+            this.reduc = 1;
+            return this.total() * self.promos[this.codePromo];
+        }
+        else {
+            this.reduc = 0;
             return "Code indisponible";
+        }
     }
 
-    /*this.totalRemise = function(codePromo){
-        if(this.promos[codePromo])
-            return this.total()*this.promos[codePromo];
+    this.totalRemise = function(){
+        if(this.codePromo.length>0 && self.promos[this.codePromo])
+            return this.total() - this.total()*self.promos[this.codePromo];
         else
-            return "Code indisponible";
-    }*/
+            return "";
+    }
 }]);
