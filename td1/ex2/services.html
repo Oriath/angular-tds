@@ -52,6 +52,10 @@
                 float:right;
             }
 
+            #services ul li.active{
+                background-color:#8ec16d;
+            }
+
             #services div.total{
                 border-top:1px solid rgba(255,255,255,0.5);
                 padding:15px 30px;
@@ -88,7 +92,7 @@
                 </p>
             </div>
             <ul>
-                <li ng-repeat="service in srvCtrl.services" ng-click="srvCtrl.toggleActive(service)" ng-class="{active:service.active}">
+                <li ng-repeat="service in srvCtrl.services" ng-click="srvCtrl.toggleActive(service)" ng-class="{active:service.active}" class="ng-binding ng-scope">
                     {{service.name}}<span data-ng-bind="service.price | currency" class="ng-binding"></span>
                 </li>
             </ul>

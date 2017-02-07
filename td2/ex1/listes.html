@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="ListesApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Listes</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="js/listesApp.js"></script>
+    <script src="js/listesController.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <style>
+        #choixMultiples a, #choixMultiples a:visited {
+            outline:none;
+            color:#389dc1;
+        }
+
+        #choixMultiples a:hover{
+            text-decoration:none;
+        }
+
+        /*-------------------------
+            The order form
+        --------------------------*/
+
+        #choixMultiples{
+            background-color: #61a1bc;
+            border-radius: 2px;
+            box-shadow: 0 1px 1px #ccc;
+            padding: 10px 10px 15px 30px;
+            margin: 50px auto;
+        }
+
+        #choixMultiples h1{
+            color:#fff;
+            font-size:30px;
+            font-family:'Century gothic', cursive;
+            font-weight: normal;
+            line-height:1;
+            text-shadow:0 3px 0 rgba(0,0,0,0.1);
+        }
+
+        #choixMultiples ul{
+            list-style: none;
+            width: 428px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #choixMultiples ul li{
+            border-bottom: 1px solid #ddd;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        #choixMultiples ul li img{
+            width:60px;
+            height:60px;
+            float:left;
+            border:none;
+        }
+
+        #choixMultiples ul li p{
+            margin-left: 75px;
+            font-weight: bold;
+            padding-top: 12px;
+            color:#6e7a7f;
+        }
+
+        #choixMultiples div.inline-block{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .list-btn{
+            width: 70px;
+            display: block!important;
+            margin: 12px 6px
+        }
+        #choixMultiples select{
+            min-width: 500px;
+        }
+    </style>
+</head>
+<body data-ng-controller="ListesController as lstCtrl">
+    <form class="img-rounded ng-pristine ng-valid ng-scope" id="choixMultiples">
+        <h1>Sélectionnez vos produits</h1>
+        <div class="form-group">
+            <div class="inline-block">
+                <label>Produits disponibles :
+                    <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="lstCtrl.selectedDispoItems" ng-options="item.title for item in lstCtrl.dispoItems" size="10">
+                    </select>
+                </label>
+                <div>
+                    <ng-pluralize count="lstCtrl.includedItems.length" when="{0:'Aucun produit à inclure',
+										1:'1 produit inclus',
+										'other':'{} produits inclus'}">
+                    </ng-pluralize>
+                </div>
+            </div>
+            <div class="inline-block">
+                <div class="btn btn-primary list-btn" ng-click="lstCtrl.addToIncluded()"><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span></div>
+                <div class="btn btn-primary list-btn" ng-click="lstCtrl.addAllToIncluded()"><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span></div>
+                <div class="btn btn-primary list-btn" ng-click="lstCtrl.removeFromIncluded()"><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span></div>
+                <div class="btn btn-primary list-btn" ng-click="lstCtrl.removeAllFromIncluded()"><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span></div>
+            </div>
+            <div class="inline-block">
+                <label>Produits inclus :
+                    <select class="form-control ng-pristine ng-untouched ng-valid" ng-model="lstCtrl.selectedIncludedItems" ng-options="item.title for item in lstCtrl.includedItems" size="10">
+                    </select>
+                </label>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

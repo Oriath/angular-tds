@@ -4,6 +4,8 @@
 
 app.controller("ServicesController", ["$http", function(http){
 
+    var self = this;
+
     this.reduc = 0;
     this.nbActive = 1;
     this.codePromo = "";
@@ -37,10 +39,10 @@ app.controller("ServicesController", ["$http", function(http){
 
     this.total = function(){
         total = 0;
-        for(i=0; i<this.services.length; i++)
+        for(i=0; i<self.services.length; i++)
         {
-            if (this.services[i].active)
-                total += this.services[i].price
+            if (self.services[i].active)
+                total += self.services[i].price
         }
         return total;
     };
@@ -48,25 +50,25 @@ app.controller("ServicesController", ["$http", function(http){
     this.toggleActive = function(service){
         service.active = !service.active;
         if(service.active)
-            this.nbActive++;
+            self.nbActive++;
         else
-            this.nbActive--;
+            self.nbActive--;
     };
 
     this.remise = function(){
-        if(this.codePromo.length>0 && self.promos[this.codePromo]) {
-            this.reduc = 1;
-            return this.total() * self.promos[this.codePromo];
+        if(self.codePromo.length>0 && self.promos[self.codePromo]) {
+            self.reduc = 1;
+            return self.total() * self.promos[self.codePromo];
         }
         else {
-            this.reduc = 0;
+            self.reduc = 0;
             return "Code indisponible";
         }
     }
 
     this.totalRemise = function(){
-        if(this.codePromo.length>0 && self.promos[this.codePromo])
-            return this.total() - this.total()*self.promos[this.codePromo];
+        if(self.codePromo.length>0 && self.promos[self.codePromo])
+            return self.total() - self.total()*self.promos[self.codePromo];
         else
             return "";
     }
