@@ -1,8 +1,18 @@
-app.controller("ListesController", function() {
+angular.module("ContactApp").controller("ContactController", function() {
 
     var self = this;
 
-    this.contacts = [];
+    this.contacts = [
+        {"nom":"Picard",
+            "prenom":"Guillaume",
+            "mail":"yoyoyo@gmail.com"},
+        {"nom":"Picard",
+            "prenom":"Guillaume",
+            "mail":"yoyoyo@gmail.com"},
+        {"nom":"Picard",
+            "prenom":"Guillaume",
+            "mail":"yoyoyo@gmail.com"}
+    ];
     this.contact = [];
     this.tmpContact = [];
     this.operation = "";

@@ -4,11 +4,30 @@
     <meta charset="UTF-8">
     <title>Contacts</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
     <script src="js/contactApp.js"></script>
     <script src="js/contactController.js"></script>
+    <script src="js/directives.js"></script>
 </head>
     <body data-ng-controller="ContactController as cttCtrl">
-        <h1>Contacts</h1>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Contacts</div>
+            <div class="panel-body">
+                <input type="text" placeholder="Filter..." class="form-control ng-pristine ng-valid ng-touched"/>
+                <table class="table table-striped">
+                    <tr ng-repeat="contact in cttCtrl.contacts" contact-elem contact="contact">
+                    </tr>
+                    <tr>
+                        <td colspan=4"><div id="add" data-ng-click="toAdd()" class="btn btn-primary">Ajouter...</div></td>
+                    </tr>
+                </table>
+            </div>
 
+            <div class="container">
+                <data-ng-pluralize count="cttCtrl.contacts.length" when="{'0': 'Aucun résultat.',
+                                                                 'one': '1 contact trouvé.',
+                                                                 'other': '{} contacts trouvés.'}"></data-ng-pluralize>
+            </div>
+        </div>
     </body>
 </html>
