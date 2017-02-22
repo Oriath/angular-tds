@@ -18,11 +18,14 @@
                     <tr ng-repeat="contact in cttCtrl.contacts" contact-elem contact="contact">
                     </tr>
                     <tr>
-                        <td colspan=4"><div id="add" data-ng-click="toAdd()" class="btn btn-primary">Ajouter...</div></td>
+                        <td colspan=4"><div id="add" data-ng-click="cttCtrl.toAdd()" class="btn btn-primary">Ajouter...</div></td>
                     </tr>
                 </table>
             </div>
-
+            <fieldset data-ng-show="cttCtrl.edit" class="container form-group form-inline">
+                <legend class="ng-binding">{{cttCtrl.operation}}</legend>
+                <div frm-contact></div>
+            </fieldset>
             <div class="container">
                 <data-ng-pluralize count="cttCtrl.contacts.length" when="{'0': 'Aucun résultat.',
                                                                  'one': '1 contact trouvé.',
