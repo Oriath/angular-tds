@@ -21,8 +21,41 @@
                     <select ng-model="curCtrl.to" ng-options="v.code as (v.code + ' - ' + v.name) for (k,v) in curCtrl.currencies" class="form-control ng-pristine ng-untouched ng-valid"></select>
                     <input type="button" value="Convertir" ng-click="curCtrl.getResult()" class="btn btn-primary">
                     <input type="text" ng-model="curCtrl.result" class="form-control ng-pristine ng-untouched ng-valid" readonly="readonly" size="5">
-                    <div class="checkbox"><label><input type="checkbox" class="ng-pristine ng-untouched ng-valid"> Historique</label></div>
+                    <div class="checkbox"><label><input type="checkbox" ng-model="curCtrl.histo" checked="histo" class="ng-pristine ng-untouched ng-valid"> Historique</label></div>
                 </form>
+            </div>
+            <div class="container-fluid" ng-show="curCtrl.histoNonVide() && curCtrl.histo">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table class="table table-striped" style="table-layout:fixed;width: 100%">
+                            <tbody><tr>
+                                <th>De</th>
+                                <th>En</th>
+                                <th class="text-center">Tx</th>
+                                <th class="text-center">Montant</th>
+                                <th class="text-center">Date</th>
+                                <th class="text-center">Delta</th>
+                                <th></th>
+                            </tr>
+                            <!-- ngRepeat: (id,conversion) in historique --><tr class="animate-repeat ng-scope" data-ng-class="{'info':conversion.update,'danger': conversion.delta<0,'success':conversion.delta>0}"></tr><!-- end ngRepeat: (id,conversion) in historique -->
+                            <tr>
+                                <td colspan="7">
+                                    <form class="form-inline ng-valid ng-dirty ng-valid-parse" style="">
+                                        <div class="input-group">
+										<span class="input-group-addon">
+											<input type="checkbox" title="Auto-refresh" class="ng-valid ng-dirty ng-valid-parse ng-touched" style="">
+										</span>
+                                            <input type="number" class="form-control ng-pristine ng-untouched ng-valid"">
+                                            <span class="input-group-btn">
+										<button class="btn btn-primary"><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span></button>
+										</span>
+                                        </div>
+                                    </form>
+                                </td>
+                            </tr>
+                            </tbody></table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

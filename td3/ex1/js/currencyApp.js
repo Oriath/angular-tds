@@ -1,4 +1,5 @@
 var app = angular.module("CurrencyApp",[]);
+
 app.config(['$sceDelegateProvider', function($sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([
         'self',
