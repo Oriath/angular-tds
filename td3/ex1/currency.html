@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="CurrencyApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+    <script src="js/currencyApp.js"></script>
+    <script src="js/currencyController.js"></script>
+</head>
+<body data-ng-controller="CurrencyController as curCtrl">
+    <div class="container ng-scope">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Currency Application</div>
+            <div class="panel-body">
+                <form class="form-group form-inline ng-pristine ng-valid">
+                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="curCtrl.what" size="5">
+                    <select ng-model="curCtrl.from" ng-options="v.code as (v.code + ' - ' + v.name) for (k,v) in curCtrl.currencies" class="form-control ng-pristine ng-untouched ng-valid"></select>
+                    <a href="#" ng-click="curCtrl.swap()">↔</a>
+                    <select ng-model="curCtrl.to" ng-options="v.code as (v.code + ' - ' + v.name) for (k,v) in curCtrl.currencies" class="form-control ng-pristine ng-untouched ng-valid"></select>
+                    <input type="button" value="Convertir" ng-click="curCtrl.getResult()" class="btn btn-primary">
+                    <input type="text" ng-model="curCtrl.result" class="form-control ng-pristine ng-untouched ng-valid" readonly="readonly" size="5">
+                    <div class="checkbox"><label><input type="checkbox" class="ng-pristine ng-untouched ng-valid"> Historique</label></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
