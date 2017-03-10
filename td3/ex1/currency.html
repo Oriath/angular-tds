@@ -27,7 +27,7 @@
             <div class="container-fluid" ng-show="curCtrl.histoNonVide() && curCtrl.histo">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <table class="table table-striped" style="table-layout:fixed;width: 100%">
+                        <table class="table table-striped">
                             <tbody><tr>
                                 <th>De</th>
                                 <th>En</th>
@@ -37,7 +37,13 @@
                                 <th class="text-center">Delta</th>
                                 <th></th>
                             </tr>
-                            <!-- ngRepeat: (id,conversion) in historique --><tr class="animate-repeat ng-scope" data-ng-class="{'info':conversion.update,'danger': conversion.delta<0,'success':conversion.delta>0}"></tr><!-- end ngRepeat: (id,conversion) in historique -->
+                            <tr ng-repeat="(id, conversion) in historique" class="animate-repeat ng-scope" data-ng-class="{'info':curCtrl.conversion.update,'danger':curCtrl.conversion.delta<0,'success':curCtrl.conversion.delta>0}"></tr>
+                                <td class=ng-binding">{{conversion.from}}</td>
+                                <td class=ng-binding">{{conversion.to}}</td>
+                                <td class=ng-binding">{{conversion.rate}}</td>
+                                <td class=ng-binding">{{conversion.amount}}</td>
+                                <td class=ng-binding">{{conversion.date}}</td>
+                                <td class=ng-binding">{{conversion.delta}}</td>
                             <tr>
                                 <td colspan="7">
                                     <form class="form-inline ng-valid ng-dirty ng-valid-parse" style="">

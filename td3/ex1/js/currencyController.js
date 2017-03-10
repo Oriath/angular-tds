@@ -16,17 +16,33 @@ app.controller("CurrencyController", ['$http', function($http) {
     this.what = 1;
     this.result;
     this.histo = true;
-    this.historique = {};
+    this.historique = [
+        {
+            id : 1,
+            conversion : {from : 1,
+                to : 1,
+                amount : function(){return 1;},
+                initialAmount : function(){return 0;},
+                delta : 1,
+                rate : 1,
+                what : 1,
+                date : 1,
+                update: "ok",
+                initialRate : 1
+            }
+        }
+    ];
     this.conversion={from : this.from,
-                     to : this.to,
-                     amount : function(){},
-                     initialAmount : function(){},
-                     delta : this.conversion.amount()-this.conversion.initialAmount(), rate : 1,
-                     what : this.what,
-                     date : "",
-                     update: "ok",
-                     initialRate : 1
-                     };
+        to : this.to,
+        amount : function(){return 1;},
+        initialAmount : function(){return 0;},
+        delta : 1,
+        rate : 1,
+        what : this.what,
+        date : "",
+        update: "ok",
+        initialRate : 1
+    };
 
     this.getResult = function(){
         $http.jsonp('https://free.currencyconverterapi.com/api/v3/convert?compact=y&q='+self.from+'_'+self.to, {jsonpCallbackParam: 'callback'})
