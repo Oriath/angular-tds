@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e36d4b1-4ea0-4194-80fa-6a334ace49eb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/angular.browserify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/js/app2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/js/controller1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/js/controller2.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/js/directives.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/js/routes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/browserify/templates/main.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/td3/ex2/calc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/td3/ex2/js/calcApp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/td3/ex2/js/calcController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/td3/ex2/js/calcService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/td3/ex1/currency.html" afterPath="$PROJECT_DIR$/td3/ex1/currency.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/td3/ex1/js/currencyController.js" afterPath="$PROJECT_DIR$/td3/ex1/js/currencyController.js" />
@@ -29,21 +23,41 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="currency.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/td3/ex1/currency.html">
+      <file leaf-file-name="calcApp.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/td3/ex2/js/calcApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+            <state relative-caret-position="25">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="currencyController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/td3/ex1/js/currencyController.js">
+      <file leaf-file-name="calcController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/td3/ex2/js/calcController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state relative-caret-position="75">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calc.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/td3/ex2/calc.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="350">
+              <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="calcService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/td3/ex2/js/calcService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -54,9 +68,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package_json" />
         <option value="HTML File" />
         <option value="JavaScript File" />
-        <option value="package_json" />
       </list>
     </option>
   </component>
@@ -85,7 +99,6 @@
         <option value="$PROJECT_DIR$/td3/ex1/js/sqdfsdhg.js" />
         <option value="$PROJECT_DIR$/td3/ex1/js/svz.js" />
         <option value="$PROJECT_DIR$/td3/ex1/js/currencyyApp.js" />
-        <option value="$PROJECT_DIR$/td3/ex1/js/currencyApp.js" />
         <option value="$PROJECT_DIR$/td3/ex1/js/currencyService.js" />
         <option value="$PROJECT_DIR$/browserify/templates/main.html" />
         <option value="$PROJECT_DIR$/browserify/js/app2.js" />
@@ -99,6 +112,12 @@
         <option value="$PROJECT_DIR$/browserify/js/app.js" />
         <option value="$PROJECT_DIR$/td3/ex1/js/currencyController.js" />
         <option value="$PROJECT_DIR$/td3/ex1/currency.html" />
+        <option value="$PROJECT_DIR$/td3/ex2/js/CalcApp.js" />
+        <option value="$PROJECT_DIR$/td3/ex1/js/currencyApp.js" />
+        <option value="$PROJECT_DIR$/td3/ex2/js/calcApp.js" />
+        <option value="$PROJECT_DIR$/td3/ex2/js/calcController.js" />
+        <option value="$PROJECT_DIR$/td3/ex2/calc.html" />
+        <option value="$PROJECT_DIR$/td3/ex2/js/calcService.js" />
       </list>
     </option>
   </component>
@@ -147,6 +166,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="angular-tds" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-tds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-tds" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="td3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ex2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-tds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-tds" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="td3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ex2" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -287,16 +346,16 @@
       <workItem from="1487688240163" duration="6808000" />
       <workItem from="1487696299869" duration="1382000" />
       <workItem from="1488525109744" duration="9256000" />
-      <workItem from="1489130987445" duration="4211000" />
+      <workItem from="1489130987445" duration="7201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50406000" />
+    <option name="totallyTimeSpent" value="53396000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1102" extended-state="7" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="1942" height="1102" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16614583" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -351,34 +410,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/td2/ex2/js/contactApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="40" lean-forward="false" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/td2/ex2/js/contactController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/td2/ex2/js/directives.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/td2/ex2/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -483,21 +515,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/td3/ex1/js/currencyApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/td3/ex1/js/currencyService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -589,18 +607,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/td3/ex1/js/currencyApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/td3/ex1/js/currencyController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="0">
+          <caret line="0" column="64" lean-forward="true" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/td3/ex1/currency.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
+        <state relative-caret-position="275">
+          <caret line="11" column="56" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/td3/ex2/js/calcService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/td3/ex2/js/calcController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/td3/ex2/calc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/td3/ex1/js/currencyService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/td3/ex2/js/calcApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>

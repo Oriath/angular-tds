@@ -16,15 +16,15 @@
             <div class="panel-body">
                 <form class="form-group form-inline ng-pristine ng-valid">
                     <input type="text" class="form-control ng-pristine ng-untouched ng-valid" ng-model="curCtrl.what" size="5">
-                    <select ng-model="curCtrl.from" ng-options="v.code as (v.code + ' - ' + v.name) for (k,v) in curCtrl.currencies" class="form-control ng-pristine ng-untouched ng-valid"></select>
+                    <select ng-model="curCtrl.from" ng-options="v.code + ' - ' + v.name for (k,v) in curCtrl.currencies" class="form-control ng-pristine ng-untouched ng-valid"></select>
                     <a href="#" ng-click="curCtrl.swap()">↔</a>
-                    <select ng-model="curCtrl.to" ng-options="v.code as (v.code + ' - ' + v.name) for (k,v) in curCtrl.currencies" class="form-control ng-pristine ng-untouched ng-valid"></select>
+                    <select ng-model="curCtrl.to" ng-options="v.code + ' - ' + v.name for (k,v) in curCtrl.currencies" class="form-control ng-pristine ng-untouched ng-valid"></select>
                     <input type="button" value="Convertir" ng-click="curCtrl.getResult()" class="btn btn-primary">
                     <input type="text" ng-model="curCtrl.result" class="form-control ng-pristine ng-untouched ng-valid" readonly="readonly" size="5">
                     <div class="checkbox"><label><input type="checkbox" ng-model="curCtrl.histo" checked="histo" class="ng-pristine ng-untouched ng-valid"> Historique</label></div>
                 </form>
             </div>
-            <div class="container-fluid" ng-show="curCtrl.histoNonVide() && curCtrl.histo">
+            <div class="container-fluid" ng-show="curCtrl.histo">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table class="table table-striped">
@@ -37,13 +37,14 @@
                                 <th class="text-center">Delta</th>
                                 <th></th>
                             </tr>
-                            <tr ng-repeat="(id, conversion) in historique" class="animate-repeat ng-scope" data-ng-class="{'info':curCtrl.conversion.update,'danger':curCtrl.conversion.delta<0,'success':curCtrl.conversion.delta>0}"></tr>
-                                <td class=ng-binding">{{conversion.from}}</td>
-                                <td class=ng-binding">{{conversion.to}}</td>
-                                <td class=ng-binding">{{conversion.rate}}</td>
-                                <td class=ng-binding">{{conversion.amount}}</td>
-                                <td class=ng-binding">{{conversion.date}}</td>
-                                <td class=ng-binding">{{conversion.delta}}</td>
+                            <tr ng-repeat="conversion in curCtrl.historique" class="animate-repeat ng-scope" data-ng-class="{'info':curCtrl.conversion.update,'danger':curCtrl.conversion.delta<0,'success':curCtrl.conversion.delta>0}">
+                                <td class=ng-binding">{{conversion.from.code}}</td>
+                                <td class=ng-binding">{{conversion.to.code}}</td>
+                                <td class="text-center ng-binding">{{conversion.rate}}</td>
+                                <td class="text-center ng-binding">{{conversion.amount()}}</td>
+                                <td class="text-center ng-binding">{{conversion.date.getHours()+1}}:{{conversion.date.getMinutes()+1}}:{{conversion.date.getSeconds()+1}} {{conversion.date.getDate()}}/{{conversion.date.getMonth()+1}}/{{conversion.date.getFullYear()}}</td>
+                                <td class="text-center ng-binding">{{conversion.delta}}</td>
+                            </tr>
                             <tr>
                                 <td colspan="7">
                                     <form class="form-inline ng-valid ng-dirty ng-valid-parse" style="">
