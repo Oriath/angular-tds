@@ -1,5 +1,5 @@
-angular.module("sampleApp").factory("code", function() {
+module.exports = function() {
     return {
         value:"noCode"
     }
-})
+}

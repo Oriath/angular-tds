@@ -1,5 +1,4 @@
-angular.module("sampleApp").config(['$routeProvider','$locationProvider',
-    function($routeProvider, $locationProvider) {
+module.exports = function($routeProvider, $locationProvider) {
         $routeProvider.
         when('/route1', {
             templateUrl: 'views/route1-template.html',
@@ -16,4 +15,4 @@ angular.module("sampleApp").config(['$routeProvider','$locationProvider',
         if(window.history && window.history.pushState){
             $locationProvider.html5Mode(true);
         }
-    }]);
+    };
